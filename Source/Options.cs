@@ -15,8 +15,11 @@ namespace exefinder
         [Option('i', "input", Required = true, DefaultValue = "", HelpText = "Input file")]
         public string Input { get; set; }
 
-        [Option('o', "output", Required = true, DefaultValue = "", HelpText = "Output file")]
+        [Option('o', "output", Required = true, DefaultValue = "", HelpText = "Output directory")]
         public string Output { get; set; }
+
+        [Option('x', "extensions", Required = false, DefaultValue = "exe", HelpText = "File extensions to search for. Defaults to exe. Comma separate each value")]
+        public string Extensions { get; set; }
 
         [HelpOption]
         public string GetUsage()
@@ -30,7 +33,7 @@ namespace exefinder
 
             this.HandleParsingErrorsInHelp(help);
 
-            help.AddPreOptionsLine("Usage: exefinder -i mft.txt -o exes.txt");
+            help.AddPreOptionsLine("Usage: exefinder -i mft.txt -o exes.txt -x \"exe,dll,bat\"");
             help.AddOptions(this);
 
             if (this.LastParserState.Errors.Count > 0)
