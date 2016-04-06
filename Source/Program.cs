@@ -54,6 +54,12 @@ namespace exefinder
                     return;
                 }
 
+                if (Directory.Exists(options.Output) == false)
+                {
+                    Console.WriteLine("The output directory does not exist");
+                    return;
+                }
+                     
                 string[] extensions = options.Extensions.Split(',');
                 for(int index = 0; index < extensions.Length; index++)
                 {

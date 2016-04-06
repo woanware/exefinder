@@ -1,5 +1,4 @@
-exefinder
-=========
+# exefinder #
 
 ## Introduction ##
 
@@ -21,11 +20,3 @@ For example an MFT that contains 500K entries was reduced to about 2K.
 ```
 exefinder.exe -i filepaths.txt -o "."
 ```
-
-## Third party ##
-
-- [CommandLine](https://github.com/gsscoder/commandline): Used for command line parsing
-
-## Requirements ##
-
-Microsoft .NET Framework v4.5 
