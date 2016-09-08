@@ -17,22 +17,22 @@ namespace exefinder
         /// </summary>
         private static string[] _paths = new string[] 
         {
-            @"\\Program Files\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.", 
-            @"\\Program Files \(x86\)\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"\\ProgramData\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"\\Users\\.?\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"\\Users\\.?\\AppData\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"\\Users\\.?\\AppData\\Local\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.", 
-            @"\\Users\\.?\\AppData\\Roaming\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.", 
-            @"\\Users\\.?\\AppData\\LocalLow\\[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"/Program Files/[a-zA-Z\-0-9#_!&\*\(\)]*?\.", 
-            @"/Program Files \(x86\)/[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"/ProgramData/[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"/Users/.?/[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"/Users/.?/AppData/[a-zA-Z\-0-9#_!&\*\(\)]*?\.",
-            @"/Users/.?/AppData/Local/[a-zA-Z\-0-9#_!&\*\(\)]*?\.", 
-            @"/Users/.?/AppData/Roaming/[a-zA-Z\-0-9#_!&\*\(\)]*?\.", 
-            @"/Users/.?/AppData/LocalLow/[a-zA-Z\-0-9#_!&\*\(\)]*?\."
+            @"\\Program Files\\[^\\]*.",
+            @"\\Program Files \(x86\)\\[^\\]*.",
+            @"\\ProgramData\\[^\\]*.",
+            @"\\Users\\[^\\]*\\[^\\]*.",
+            @"\\Users\\[^\\]*\\AppData\\[^\\]*.",
+            @"\\Users\\[^\\]*\\AppData\\Local\\[^\\]*.",
+            @"\\Users\\[^\\]*\\AppData\\Roaming\\[^\\]*.",
+            @"\\Users\\[^\\]*\\AppData\\LocalLow\\[^\\]*.",
+            @"/Program Files/[^/]*.",
+            @"/Program Files \(x86\)/[^/]*.",
+            @"/ProgramData/[^/]*.",
+            @"/Users/[^/]*/[^/]*.",
+            @"/Users/[^/]*/AppData/[^/]*.",
+            @"/Users/[^/]*/AppData/Local/[^/]*.",
+            @"/Users/[^/]*/AppData/Roaming/[^/]*.",
+            @"/Users/[^/]*/AppData/LocalLow/[^/]*."
         };
 
         /// <summary>
